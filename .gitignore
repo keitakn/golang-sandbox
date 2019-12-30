@@ -12,4 +12,16 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+
+# GoLand Setting Files
+.idea
+
+# Go Binary
+golang-sandbox
+
+# env files
+.envrc
+
+# realize Setting Files
+.realize.yaml
