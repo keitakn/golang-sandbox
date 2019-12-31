@@ -8,13 +8,13 @@ schema:
   commands:
     install:
       status: true
-      method: go build -o golang-sandbox
+      method: go build -o helloworld
     run:
       status: true
       method: /go/bin/dlv
   args:
     - exec
-    - ./golang-sandbox
+    - ./helloworld
     - --headless=true
     - --listen=:2345
     - --api-version=2

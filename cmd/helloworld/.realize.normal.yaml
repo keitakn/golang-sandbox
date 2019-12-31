@@ -8,10 +8,10 @@ schema:
     commands:
       install:
         status: true
-        method: go build -o golang-sandbox
+        method: go build -o helloworld
       run:
         status: true
-        method: ./golang-sandbox
+        method: ./helloworld
     watcher:
       extensions:
         - go
