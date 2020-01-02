@@ -12,6 +12,7 @@ func (s String) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.Handle("/", String("Hello World golang-sandbox!!!"))
+	msg := "Hello World golang-sandbox 🐱"
+	http.Handle("/", String(msg))
 	http.ListenAndServe(":8080", nil)
 }
