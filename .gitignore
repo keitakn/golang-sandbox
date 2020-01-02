@@ -13,15 +13,20 @@
 
 # Dependency directories (remove the comment below to include it)
 vendor/
+cmd/helloworld/vendor/
 
 # GoLand Setting Files
 .idea
+cmd/helloworld/.idea
 
 # Go Binary
 golang-sandbox
+cmd/helloworld/helloworld
 
 # env files
 .envrc
+cmd/helloworld/.envrc
 
 # realize Setting Files
 .realize.yaml
+cmd/helloworld/.realize.yaml

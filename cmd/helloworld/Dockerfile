@@ -7,7 +7,7 @@ COPY . .
 RUN set -x && \
   apk update && \
   apk add --no-cache git && \
-  go build -o golang-sandbox && \
+  go build -o helloworld && \
   go get gopkg.in/urfave/cli.v2@master && \
   go get github.com/oxequa/realize && \
   go get -u github.com/go-delve/delve/cmd/dlv && \
@@ -17,11 +17,11 @@ FROM alpine:3.10
 
 WORKDIR /app
 
-COPY --from=build /go/app/golang-sandbox .
+COPY --from=build /go/app/helloworld .
 
 RUN set -x && \
   addgroup go && \
   adduser -D -G go go && \
-  chown -R go:go /app/golang-sandbox
+  chown -R go:go /app/helloworld
 
-CMD ["./golang-sandbox"]
+CMD ["./helloworld"]
